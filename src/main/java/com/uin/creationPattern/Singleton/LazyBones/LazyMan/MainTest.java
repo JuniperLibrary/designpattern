@@ -1,4 +1,4 @@
-package com.uin.creationPattern.Singleton.LazyBones.type1;
+package com.uin.creationPattern.Singleton.LazyBones.LazyMan;
 
 /**
  * \* Created with IntelliJ IDEA.
