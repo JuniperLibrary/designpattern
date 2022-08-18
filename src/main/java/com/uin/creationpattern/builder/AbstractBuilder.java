@@ -4,7 +4,6 @@ package com.uin.creationpattern.builder;
  * 抽象建造者
  */
 public abstract class AbstractBuilder {
-
     Phone phone;
     abstract AbstractBuilder custormCpu(String cpu);
     abstract AbstractBuilder custormMem(String mem);
@@ -14,7 +13,4 @@ public abstract class AbstractBuilder {
     Phone getProduct(){
         return phone;
     }
-
-
-
 }
