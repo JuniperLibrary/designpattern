@@ -1,11 +1,7 @@
 package com.uin.creationpattern.singleton.Enum;
 
 /**
- * \* Created with IntelliJ IDEA.
- * \* @author wanglufei
- * \* Date: 2021年08月27日 20:09
- * \* Description: 使用枚举实现单例模式
- * \
+ * 使用枚举实现单例模式
  */
 public class Singleton {
     public static void main(String[] args) {
@@ -19,14 +15,6 @@ public class Singleton {
 
         instance1.sayOk();
 
-        //测试结果
-        /**
-         * true
-         * 460141958
-         * 460141958
-         */
-
-        //********************************
         /**
          * 总结： 枚举实现单例模式优缺点
          *  (1) 这种借助JDK1.5 中添加的枚举来实现单例模式。不仅能够避免多线程同步问题，而且还能防止反序列化重新创建对象
@@ -37,6 +25,7 @@ public class Singleton {
 
 enum Singleton1 {
     INSTANCE;//属性
+
     public void sayOk() {
         System.out.println("ok");
     }
