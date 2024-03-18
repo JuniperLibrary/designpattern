@@ -7,7 +7,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class RealSubject {
-    public void request() {
-        log.info("Request From real subject");
-    }
+
+  public void request() {
+    log.info("Request From real subject");
+  }
 }

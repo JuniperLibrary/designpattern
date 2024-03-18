@@ -9,39 +9,40 @@ import java.lang.reflect.Proxy;
 
 @Slf4j
 public class DynamicProxyJdk implements InvocationHandler {
-    private Object sub;
 
-    public DynamicProxyJdk(Object obj) {
-        this.sub = obj;
-    }
+  private Object sub;
 
-    public Object getProxyObject(InvocationHandler handler) {
-        Class<?> classType = sub.getClass();
-        /**
-         * classType.getClassLoader() 类加载器
-         * sub.getClass().getInterfaces() 接口
-         * handler   处理器
-         *
-         */
-        return Proxy.newProxyInstance(classType.getClassLoader(),
-                sub.getClass().getInterfaces(),
-                handler);
-    }
+  public DynamicProxyJdk(Object obj) {
+    this.sub = obj;
+  }
 
-    @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        this.beforeRequest();
-        // 真实角色完成的事情
-        method.invoke(sub, args);
-        this.afterRequest();
-        return null;
-    }
+  public Object getProxyObject(InvocationHandler handler) {
+    Class<?> classType = sub.getClass();
+    /**
+     * classType.getClassLoader() 类加载器
+     * sub.getClass().getInterfaces() 接口
+     * handler   处理器
+     *
+     */
+    return Proxy.newProxyInstance(classType.getClassLoader(),
+        sub.getClass().getInterfaces(),
+        handler);
+  }
 
-    private void beforeRequest() {
-        log.info("before request!");
-    }
+  @Override
+  public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    this.beforeRequest();
+    // 真实角色完成的事情
+    method.invoke(sub, args);
+    this.afterRequest();
+    return null;
+  }
 
-    private void afterRequest() {
-        log.info("after request");
-    }
+  private void beforeRequest() {
+    log.info("before request!");
+  }
+
+  private void afterRequest() {
+    log.info("after request");
+  }
 }
