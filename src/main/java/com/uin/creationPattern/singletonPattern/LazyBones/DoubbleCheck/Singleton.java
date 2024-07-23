@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.LazyBones.DoubbleCheck;
+package com.uin.creationPattern.singletonPattern.LazyBones.DoubbleCheck;
 
 /**
  * 第四种 懒汉双重检查

@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.BadMash.StaticCodeBlock;
+package com.uin.creationPattern.singletonPattern.BadMash.StaticCodeBlock;
 
 /**
  * Created with IntelliJ IDEA.

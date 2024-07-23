@@ -1,4 +1,4 @@
-package com.uin.creationpattern.prototypepattern.CloneSheepTest;
+package com.uin.creationPattern.prototypepattern.CloneSheepTest;
 
 /**
  * \* Created with IntelliJ IDEA. \* @author wanglufei \* Date: 2021年08月28日 9:30 \* Description:

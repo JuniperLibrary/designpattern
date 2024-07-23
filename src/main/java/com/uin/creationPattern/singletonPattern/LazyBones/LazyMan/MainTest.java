@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.LazyBones.LazyMan;
+package com.uin.creationPattern.singletonPattern.LazyBones.LazyMan;
 
 /**
  * \* Created with IntelliJ IDEA. \* @author wanglufei \* Date: 2021年08月27日 14:59 \* Description: \

@@ -1,4 +1,4 @@
-package com.uin.creationpattern.builder;
+package com.uin.creationPattern.builderPattern;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

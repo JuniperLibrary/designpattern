@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.Enum;
+package com.uin.creationPattern.singletonPattern.Enum;
 
 /**
  * 使用枚举实现单例模式

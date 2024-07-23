@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.LazyBones.LazyMan;
+package com.uin.creationPattern.singletonPattern.LazyBones.LazyMan;
 
 /**
  * 第一种方法 懒汉(线程不安全)

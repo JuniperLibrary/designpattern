@@ -1,4 +1,4 @@
-package com.uin.creationpattern.builder;
+package com.uin.creationPattern.builderPattern;
 
 public class Test {
 

@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.StaticInnerClass;
+package com.uin.creationPattern.singletonPattern.StaticInnerClass;
 
 
 /**

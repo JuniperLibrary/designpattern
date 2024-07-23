@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.BadMash.StaticConstants;
+package com.uin.creationPattern.singletonPattern.BadMash.StaticConstants;
 
 /**
  * \* Created with IntelliJ IDEA. \* @author wanglufei \* Date: 2021年08月27日 15:07 \* Description:

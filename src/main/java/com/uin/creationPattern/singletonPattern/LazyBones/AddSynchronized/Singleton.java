@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.LazyBones.AddSynchronized;
+package com.uin.creationPattern.singletonPattern.LazyBones.AddSynchronized;
 
 
 /**

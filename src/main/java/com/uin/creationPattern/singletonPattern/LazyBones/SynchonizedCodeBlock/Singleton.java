@@ -1,4 +1,4 @@
-package com.uin.creationpattern.singleton.LazyBones.SynchonizedCodeBlock;
+package com.uin.creationPattern.singletonPattern.LazyBones.SynchonizedCodeBlock;
 
 /**
  * \* Created with IntelliJ IDEA. \* @author wanglufei \* Date: 2021年08月27日 17:22 \* Description:

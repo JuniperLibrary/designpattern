@@ -1,4 +1,4 @@
-package com.uin.creationpattern.builder;
+package com.uin.creationPattern.builderPattern;
 
 /**
  * 具体建造者
