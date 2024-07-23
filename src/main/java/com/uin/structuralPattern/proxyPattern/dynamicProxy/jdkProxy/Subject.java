@@ -1,4 +1,4 @@
-package com.uin.structuralPattern.proxy.dynamicProxy.jdkProxy;
+package com.uin.structuralPattern.proxyPattern.dynamicProxy.jdkProxy;
 
 /**
  * 抽象角色

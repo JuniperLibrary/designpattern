@@ -1,4 +1,4 @@
-package com.uin.structuralPattern.proxy.staticProxy;
+package com.uin.structuralPattern.proxyPattern.dynamicProxy.jdkProxy;
 
 import lombok.extern.slf4j.Slf4j;
 

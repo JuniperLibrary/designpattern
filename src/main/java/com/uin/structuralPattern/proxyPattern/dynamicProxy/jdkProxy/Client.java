@@ -1,7 +1,7 @@
-package com.uin.structuralPattern.proxy.dynamicProxy.jdkProxy;
+package com.uin.structuralPattern.proxyPattern.dynamicProxy.jdkProxy;
 
-import com.uin.structuralPattern.proxy.staticProxy.RealSubject;
-import com.uin.structuralPattern.proxy.staticProxy.Subject;
+import com.uin.structuralPattern.proxyPattern.staticProxy.RealSubject;
+import com.uin.structuralPattern.proxyPattern.staticProxy.Subject;
 
 public class Client {
 
