@@ -1,7 +1,7 @@
 package com.uin.structurapattern.proxypattern.dynamicproxy.jdkproxy;
 
-import com.uin.structurapattern.proxypattern.staticproxy.RealSubject;
-import com.uin.structurapattern.proxypattern.staticproxy.Subject;
+import com.uin.structurapattern.proxypattern.staticproxy.simple.RealSubject;
+import com.uin.structurapattern.proxypattern.staticproxy.simple.Subject;
 
 public class Client {
 

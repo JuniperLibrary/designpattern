@@ -1,4 +1,4 @@
-package com.uin.structurapattern.proxypattern.staticproxy;
+package com.uin.structurapattern.proxypattern.staticproxy.simple;
 
 /**
  * 抽象角色
