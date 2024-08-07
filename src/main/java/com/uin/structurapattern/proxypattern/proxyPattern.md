@@ -73,4 +73,34 @@
 
 ## Java动态代理
 
-通常情况下，每个代理类编译之后都会生成一个class文件，代理类所实现的接口和所代理的方法都被固定，这种代理被称为静态代理（Static Proxy）​。那么有没有一种机制能够让系统在运行时动态创建代理类？答案就是本节将要介绍的动态代理（Dynamic Proxy）。动态代理是一种较为高级的代理模式，它在事务管理、AOP（Aspect-Oriented Programming，面向方面编程）等领域都发挥了重要的作用。
+通常情况下，每个代理类编译之后都会生成一个class文件，代理类所实现的接口和所代理的方法都被固定，这种代理被称为静态代理（Static Proxy）。那么有没有一种机制能够让系统在运行时动态创建代理类？答案就是本节将要介绍的动态代理（Dynamic Proxy）。动态代理是一种较为高级的代理模式，它在事务管理、AOP（Aspect-Oriented Programming，面向方面编程）等领域都发挥了重要的作用。
+
+在传统的代理模式中，客户端通过Proxy类调用RealSubject类的request（）方法，同时还可以在代理类中封装其他方法（例如preRequest（）和postRequest（）等）。如果按照这种方法使用代理模式，那么代理类和真实主题类都应该是事先已经存在的，代理类的接口和所代理方法都已明确指定。如果需要为不同的真实主题类提供代理类或者代理一个真实主题类中的不同方法，都需要增加新的代理类，这将导致系统中的类个数急剧增加，因此需要想办法减少系统中类的个数。动态代理可以让系统能够根据实际需要来动态创建代理类，让同一个代理类能够代理多个不同的真实主题类，而且可以代理不同的方法。
+
+从JDK 1.3开始，Java语言提供了对动态代理的支持。Java语言实现动态代理时需要用到位于java.lang.reflect包中的一些类，现简要说明如下。
+
+1. java.lang.reflect.Proxy：Proxy类提供了创建动态代理对象的静态方法newProxyInstance（）
+   - public static Class<?>getProxyClass（ClassLoader loader，Class<?>…interfaces）。该方法用于返回一个Class类型的代理类，在参数中需要提供类加载器并需要指定代理的接口数组（与真实主题类的接口列表一致）​。
+   - public static Object newProxyInstance（ClassLoader loader，Class<?>interfaces，InvocationHandler h）。该方法用于返回一个动态创建的代理类的实例，方法中第1个参数loader表示代理类的类加载器，第2个参数interfaces表示代理类所实现的接口列表（与真实主题类的接口列表一致）​，第3个参数h表示所指派的调用处理程序类
+2. InvocationHandler：InvocationHandler接口定义了动态代理类所调用的所有方法都会被重写，并且该接口只有一个方法invoke（）
+
+动态代理类需要在运行时指定所代理真实主题类的接口。客户端在调用动态代理对象的方法时，调用请求会将请求自动转发给InvocationHandler对象的invoke（​）方法，由invoke（​）方法来实现对请求的统一处理
+
+在Java中，动态代理是一种在运行时动态生成代理类的机制，它可以在不预先定义代理类的情况下实现代理功能。Java动态代理通常依赖于 java.lang.reflect.Proxy 类和 java.lang.reflect.InvocationHandler 接口来实现。
+
+
+在Java中，动态代理是一种在运行时动态生成代理类的机制，它可以在不预先定义代理类的情况下实现代理功能。Java动态代理通常依赖于 java.lang.reflect.Proxy 类和 java.lang.reflect.InvocationHandler 接口来实现。
+
+下面是一个简单的示例，演示如何使用 JDK 的动态代理实现一个通用的日志代理，可以代理任何接口的方法调用，并在方法执行前后记录日志：
+[jdkproxy](dynamicproxy%2Fjdkproxy)
+
+
+JDK中提供的动态代理只能代理一个或多个接口，如果需要动态代理具体类或抽象类，可以使用CGLib（Code Generation Library）等工具。CGLib是一个功能较为强大、性能和质量也较好的代码生成包，在许多AOP框架中得到了广泛应用。大家可以自行查阅相关资料来学习CGLib。
+
+CGLIB（Code Generation Library）是一个强大的，高性能的代码生成库，它扩展了 Java 的反射能力，允许在运行时生成新的类。与 JDK 动态代理不同，CGLIB 动态代理是通过生成目标类的子类来实现代理，因此它可以代理非接口类型的类。
+
+下面是一个简单的示例，演示如何使用 CGLIB 实现一个日志代理，代理一个普通的类而不是接口：
+
+首先，确保你的项目中包含了 CGLIB 的依赖。如果使用 Maven，可以在 pom.xml 中添加以下依赖：
+
+
